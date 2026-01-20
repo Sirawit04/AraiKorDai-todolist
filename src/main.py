@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 from typing import Optional
 
-from models import TodoItem, Priority, Status
+from .models import TodoItem, Priority, Status
 
 
 class AuthManager:
