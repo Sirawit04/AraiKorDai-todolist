@@ -1,0 +1,38 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/SlavaVedernikov/C4InterFlow/refs/heads/master/C4InterFlow/schema.json
+ICTToDoListContext:
+  SoftwareSystems:
+    ICTToDoList:
+      Interfaces:
+        Managespersonalandcoursetasks:
+          Description: Interface for ICT To Do List
+        Viewsteachingtasksanddeadlines:
+          Description: Interface for ICT To Do List
+        Managessystemandusers:
+          Description: Interface for ICT To Do List
+        Syncscourseandassignmentdata:
+          Flows:
+            - Type: Use
+              Expression: ..MyCourses.Interfaces.Syncscourseandassignmentdata
+    MyCourses:
+      Interfaces:
+        Syncscourseandassignmentdata:
+          Description: Interface for MyCourses
+  Actors:
+    Instructor:
+      Activities:
+        Viewsteachingtasksanddeadlines:
+          Flows:
+            - Type: Use
+              Expression: ..ICTToDoList.Interfaces.Viewsteachingtasksanddeadlines
+    Student:
+      Activities:
+        Managespersonalandcoursetasks:
+          Flows:
+            - Type: Use
+              Expression: ..ICTToDoList.Interfaces.Managespersonalandcoursetasks
+    SystemAdministrator:
+      Activities:
+        Managessystemandusers:
+          Flows:
+            - Type: Use
+              Expression: ..ICTToDoList.Interfaces.Managessystemandusers
