@@ -2,8 +2,6 @@
 C4Component
 title ICT To Do List - Web API Component Diagram
 
-Container(api, "Web API", "FastAPI", "Provides REST endpoints and application logic")
-
 Component(auth, "Authentication & Authorization Component", "Security", "Handles login, token validation, and access control")
 Component(task, "Task Management Component", "Service", "Manages CRUD operations for manual and imported tasks")
 Component(sync, "MyCourses Sync Orchestrator Component", "Service", "Coordinates synchronization with MyCourses")
